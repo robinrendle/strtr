@@ -1,2 +1,22 @@
-
-
+{
+  "name": "strtr",
+  "version": "1.0.0",
+  "description": "A boilerplate for writing front-end code as quickly as possible.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinrendle/strtr.git"
+  },
+  "keywords": [
+    "boilerplate"
+  ],
+  "author": "Robin Rendle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robinrendle/strtr/issues"
+  },
+  "homepage": "https://github.com/robinrendle/strtr"
+}
