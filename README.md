@@ -8,9 +8,9 @@ This repo contains the following:
 
 - An `index.html` file with best practices for writing clean, semantic markup.
 - A series of helpful Gulp tasks.
-- Plain Sass (with no frameworks or extensions like Compass.)
+- And finally a `_reset.scss` file which is imported into `project.scss`.
 
-Ideally this should leave the developer to pick which JS framework or CMS/templating system they’ll need for a particular project. Although this is likely to change in the future (hello jspm.)
+For this [Barebones](https://github.com/paulrobertlloyd/barebones)-esque project I’m hoping to stick away from Compass as ideally this should give the developer the autonomy to pick which Sass/JS framework or CMS/templating system they’ll need for a particular project. This is very likely to change in the future however (hello jspm)
 
 
 ## Workflow
@@ -24,7 +24,7 @@ Here’s how to get this thing up and running:
 3. `npm start` will compile Sass.
 4. `live-server` automatically updates the browser with any changes – [install that with npm](https://www.npmjs.com/package/live-server).
 5. `npm run-script build` will run a series of Gulp tasks to minify the CSS and to optimize images.
-6. Install [jspm](http://jspm.io/) (not included here for a variety of reasons.)
+?. Install [jspm](http://jspm.io/) (not included here for a variety of reasons.)
 
 
 ## General thoughts
