@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 
 // SVG optimisation 
 gulp.task('svg', function(){
-    gulp.src('./img/*.svg')
+    gulp.src('./src/img/*.svg')
         .pipe(size({gzip: true, showFiles: true}))
         .pipe(svgo())
         .pipe(size({gzip: true, showFiles: true}))
@@ -22,7 +22,7 @@ gulp.task('svg', function(){
 
 // Image optimization from /img to /build/img
 gulp.task('images', function(cb){
-    gulp.src(['./img/**/*.png','./img/**/*.jpg','./img/**/*.gif','./img/**/*.jpeg']).pipe(imageop({
+    gulp.src(['./src/img/**/*.png','./src/img/**/*.jpg','./src/img/**/*.gif','./src/img/**/*.jpeg']).pipe(imageop({
         optimizationLevel: 5,
         progressive: true,
         interlaced: true
@@ -34,7 +34,7 @@ gulp.task('images', function(cb){
 
 // Compiles scss into the build/css dir
 gulp.task('sass', function(){
-    gulp.src('./sass/project.scss')
+    gulp.src('./src/sass/project.scss')
         .pipe(watch(function(files){
             return files.pipe(sass())
                 .pipe(prefix())
@@ -65,6 +65,6 @@ gulp.task('build', ['images', 'minify', 'svg']);
 
 // Watch tasks
 gulp.task('default', function(){
-    gulp.watch('./sass/project.scss', ['sass']);
-    gulp.watch('./sass/*.scss', ['sass']);
+    gulp.watch('./src/sass/project.scss', ['sass']);
+    gulp.watch('./src/sass/*.scss', ['sass']);
 });
