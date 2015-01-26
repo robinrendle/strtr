@@ -2,7 +2,7 @@
 
 ### A simple, no-frills front-end boilerplate.
 
-At the beginning of each project I tend to open up the previous codebase, copying and pasting bits of code as I go. This feels haphazard to say the least, so the aim of this project is to optimize, optimize, optimize! I want to spend more of my time building a website rather than dealing with the tedious interlinking of dependencies that I commonly have to work with. So please note that this boilerplate is not designed to be used in production, it’s merely a collection of methods for getting into a coding environment as quickly as possible.
+At the beginning of each project I often return to my last, copying and pasting bits of code as I go. This feels haphazard and unorganised to say the least, so the aim of this project is to optimize, optimize, optimize! I want to spend more of my time building a website rather than dealing with the tedious interlinking of dependencies that I commonly have to work with. So please note that this boilerplate is not designed to be used in production, it’s merely a collection of methods for getting into a coding environment as quickly as possible.
 
 This repo contains the following: 
 
