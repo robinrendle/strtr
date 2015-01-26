@@ -1,5 +1,3 @@
-![strtr](http://cl.ly/image/2e0O2Q0c1G31/shuttle.png)
-
 # strtr
 
 ### A simple, no-frills front-end boilerplate.
