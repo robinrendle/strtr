@@ -24,7 +24,6 @@ Here’s how to get this thing up and running:
 3. `npm start` will compile Sass.
 4. `live-server` automatically updates the browser with any changes – [install that with npm](https://www.npmjs.com/package/live-server).
 5. `npm run-script build` will run a series of Gulp tasks to minify the CSS and to optimize images.
-?. Install [jspm](http://jspm.io/) (not included here for a variety of reasons.)
 
 
 ## General thoughts
