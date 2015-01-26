@@ -5,7 +5,7 @@ At the beginning of each project I tend to open up the previous codebase, copyin
 This repo contains the following: 
 
 - An `index.html` file with best practices for writing clean, semantic markup.
-- A series of Gulp tasks to compile Sass and minify CSS.
+- A series of helpful Gulp tasks
 - Plain Sass (with no frameworks or extensions like Compass.)
 - No CMS or Jekyll-inspired service here: those sorts of tools are always needed on a project-by-project basis.
 - JSPM.io for writing JS with ES6.
@@ -16,7 +16,7 @@ This repo contains the following:
 - Run `npm install` to fetch the dependencies.
 - Then run `npm start` to compile Sass.
 - [`live-server`](https://www.npmjs.com/package/live-server) will automatically update the browser with any changes.
-- By default styles are not minified but they can be optionally if you run `npm run-script minify`.
+- By default styles are not minified but they can be optionally if you run `npm run-script build`.
 
 - Everything gets compiled into the `./build` dir so that I know it’s been compiled and minified.
 
