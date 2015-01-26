@@ -7,7 +7,29 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     prefix = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
-    size = require('gulp-size');
+    size = require('gulp-size'),
+    imageop = require('gulp-image-optimization'),
+    svgo = require('gulp-svgo');
+
+// SVG optimisation 
+gulp.task('svg', function(){
+    gulp.src('./img/*.svg')
+        .pipe(size({gzip: true, showFiles: true}))
+        .pipe(svgo())
+        .pipe(size({gzip: true, showFiles: true}))
+        .pipe(gulp.dest('./build/img'));
+});
+
+// Image optimization from /img to /build/img
+gulp.task('images', function(cb){
+    gulp.src(['./img/**/*.png','./img/**/*.jpg','./img/**/*.gif','./img/**/*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    }))
+    .pipe(size({gzip: true, showFiles: true}))
+    .pipe(gulp.dest('./build/img')).on('end', cb).on('error', cb);
+});
 
 
 // Compiles scss into the build/css dir
@@ -38,7 +60,10 @@ gulp.task('prefix', function(){
         .pipe(gulp.dest('./build/css'));
 });
 
+// Tasks for production
+gulp.task('build', ['images', 'minify', 'svg']);
 
+// Watch tasks
 gulp.task('default', function(){
     gulp.watch('./sass/project.scss', ['sass']);
     gulp.watch('./sass/*.scss', ['sass']);
