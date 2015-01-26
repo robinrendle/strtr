@@ -59,11 +59,14 @@ gulp.task('prefix', function(){
         .pipe(gulp.dest('./build/css'));
 });
 
+// Watch tasks
+gulp.task('start', function(){
+    gulp.watch('./src/sass/project.scss', ['sass']);
+    gulp.watch('./src/sass/*.scss', ['sass']);
+})
+
 // Tasks for production
 gulp.task('build', ['images', 'minify', 'svg']);
 
-// Watch tasks
-gulp.task('default', function(){
-    gulp.watch('./src/sass/project.scss', ['sass']);
-    gulp.watch('./src/sass/*.scss', ['sass']);
-});
+// Default tasks
+gulp.task('default', ['build', 'start']);
