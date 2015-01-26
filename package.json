@@ -4,12 +4,12 @@
   "description": "A boilerplate for writing front-end code as quickly as possible.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "minify": "gulp minify"
   },
   "repository": {
     "type": "git",
-    "start": "gulp",
-    "minify": "gulp minify"
+    "url": "https://github.com/robinrendle/strtr.git"
   },
   "keywords": [
     "boilerplate"
