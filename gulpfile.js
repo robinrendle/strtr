@@ -23,12 +23,12 @@ gulp.task('sass', function(){
 
 // Minifies CSS
 gulp.task('minify', function(){
-    gulp.src('./build/css/project.scss')
+    gulp.src('./build/css/project.css')
         .pipe(size({gzip: true, showFiles: true, title:'minified project.css'}))
         .pipe(minifyCSS())
-        .pipe(size({gzip: true, showFiles: true, title:'minified colors.css'}))
         .pipe(rename('project.min.css'))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('./build/css/'))
+        .pipe(size({gzip: true, showFiles: true, title:'minified project.css'}));
 });
 
 // Autoprefixes on minified CSS
