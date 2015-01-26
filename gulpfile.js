@@ -41,4 +41,5 @@ gulp.task('prefix', function(){
 
 gulp.task('default', function(){
     gulp.watch('./sass/project.scss', ['sass']);
+    gulp.watch('./sass/*.scss', ['sass']);
 });
