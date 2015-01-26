@@ -1,8 +1,8 @@
+![strtr](http://cl.ly/image/2e0O2Q0c1G31/shuttle.png)
+
 # strtr
 
 ### A simple, no-frills front-end boilerplate.
-
-![strtr](http://cl.ly/image/2X1M3c0x243B/shuttle.png)
 
 At the beginning of each project I often return to my last, copying and pasting bits of code as I go. This feels haphazard and unorganised to say the least, so the aim of this project is to optimize, optimize, optimize! I want to spend more of my time building a website rather than dealing with the tedious interlinking of dependencies that I commonly have to work with. So please note that this boilerplate is not designed to be used in production, it’s merely a collection of methods for getting into a coding environment as quickly as possible.
 
