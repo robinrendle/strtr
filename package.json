@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/robinrendle/strtr.git"
+    "start": "gulp",
+    "minify": "gulp minify"
   },
   "keywords": [
     "boilerplate"
@@ -18,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/robinrendle/strtr/issues"
   },
-  "homepage": "https://github.com/robinrendle/strtr"
+  "homepage": "https://github.com/robinrendle/strtr",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-concat": "^2.4.1",
+    "gulp-eslint": "^0.2.0",
+    "gulp-minify-css": "^0.3.5",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.1.0",
+    "gulp-size": "^1.2.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-watch": "~0.6.8"
+  }
 }
