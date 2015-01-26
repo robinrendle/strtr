@@ -1,13 +1,4 @@
 # strtr
 
-There are many boilerplates out there, but this is mine. 
+A boilerplate for writing front-end code as quickly as possible.
 
-## Description of project
-
-## Getting started
-
-1. Step one
-2. Step two
-3. Step three
-
-## Contributors
