@@ -7,10 +7,13 @@ At the beginning of each project I often return to my last, copying and pasting 
 This repo contains the following: 
 
 - An `index.html` file with best practices for writing clean, semantic markup.
-- A series of helpful Gulp tasks.
-- And finally a `_reset.scss` file which is imported into `project.scss`.
+- A plain Sass starting point, a simple `_reset.scss` file is imported into `project.scss` for maximum flexibility.
+- A series of helpful Gulp tasks are included to:
+    - compile Sass 
+    - minimise CSS
+    - optimise images + SVGs
 
-For this [Barebones](https://github.com/paulrobertlloyd/barebones)-esque project I’m hoping to stick away from Compass as ideally this should give the developer the autonomy to pick which Sass/JS framework or CMS/templating system they’ll need for a particular project. This is very likely to change in the future however (hello jspm)
+For this [Barebones](https://github.com/paulrobertlloyd/barebones)-esque project I’m hoping to stick away from Compass or Bourbon as ideally this project should give the developer the autonomy to pick which Sass/JS framework or CMS/templating system they’ll need for a particular project.
 
 
 ## Workflow
