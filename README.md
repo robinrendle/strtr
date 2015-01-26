@@ -2,7 +2,7 @@
 
 ### A simple, no-frills front-end boilerplate.
 
-At the beginning of each project I tend to open up the previous codebase, copying and pasting bits of code as I go. This feels haphazard to say the least, so the aim of this project is to optimize, optimize, optimize! I want to spend more of my time building a website rather than dealing with the tedious interlinking of dependencies that I commonly have to work with. Please note that this boilerplate is not designed to be used in production, it’s merely a collection of methods for getting into a coding environment as quickly as possible.
+At the beginning of each project I tend to open up the previous codebase, copying and pasting bits of code as I go. This feels haphazard to say the least, so the aim of this project is to optimize, optimize, optimize! I want to spend more of my time building a website rather than dealing with the tedious interlinking of dependencies that I commonly have to work with. So please note that this boilerplate is not designed to be used in production, it’s merely a collection of methods for getting into a coding environment as quickly as possible.
 
 This repo contains the following: 
 
@@ -10,12 +10,14 @@ This repo contains the following:
 - A series of helpful Gulp tasks.
 - Plain Sass (with no frameworks or extensions like Compass.)
 
-Ideally this should leave the developer to pick which JS framework or CMS/templating system they’ll need for a particular project.
+Ideally this should leave the developer to pick which JS framework or CMS/templating system they’ll need for a particular project. Although this is likely to change in the future (hello jspm.)
 
 
 ## Workflow
 
-Throughout the last dozen or so projects I’ve worked on, the underlying front-end has been relatively simple. The `./src` directory contains all of the images, Sass and JavaScript files needed and a suite of Gulp tasks minimizes, concatenates and moves these files into `./build`:
+Throughout the last dozen or so projects I’ve worked on, the underlying front-end has been relatively simple. The `./src` directory contains all of the images, Sass and JavaScript files whilst a suite of Gulp tasks are set to minimize, concatenate and move these files into `./build`.
+
+Here’s how to get this thing up and running:
 
 1. Clone the repo.
 2. Run `npm install` to fetch the dependencies.
