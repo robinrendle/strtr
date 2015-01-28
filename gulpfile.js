@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     imageop = require('gulp-image-optimization'),
     svgo = require('gulp-svgo');
 
-// SVG optimisation 
+// SVG optimisation
 gulp.task('svg', function(){
     gulp.src('./src/img/*.svg')
         .pipe(size({gzip: true, showFiles: true}))
@@ -63,6 +63,7 @@ gulp.task('prefix', function(){
 gulp.task('start', function(){
     gulp.watch('./src/sass/project.scss', ['sass']);
     gulp.watch('./src/sass/*.scss', ['sass']);
+    gulp.watch('./src/sass/**/*.scss', ['sass']);
 })
 
 // Tasks for production
