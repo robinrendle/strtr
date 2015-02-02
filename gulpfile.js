@@ -35,7 +35,9 @@ gulp.task('images', function(cb){
 gulp.task('sass', function(){
     gulp.src('./src/sass/project.scss')
         .pipe(watch(function(files){
-            return files.pipe(sass())
+            return files.pipe(sass({
+                errLogToConsole: true
+            }))
                 .pipe(prefix())
                 .pipe(size({gzip: true, showFiles: true, title:'unminified project.css'}))
                 .pipe(gulp.dest('./build/css'))
