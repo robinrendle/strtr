@@ -2,8 +2,6 @@
 
 ### A simple, no frills front-end boilerplate.
 
-At the beginning of each project I often return to the project I just finished, copying and pasting bits of code as I go. This feels haphazard and unorganised to say the least, so the aim of this project is to optimize, optimize, optimize! I want to spend more of my time building a website rather than dealing with the tedious interlinking of dependencies that I commonly have to work with. So please note that this boilerplate is not designed to be used in production, it’s merely a collection of methods for getting into a coding environment as quickly as possible.
-
 This repo contains the following: 
 
 - An `index.html` file with best practices for writing clean, semantic markup.
@@ -12,9 +10,6 @@ This repo contains the following:
     - compile Sass 
     - minimise CSS
     - optimise images + SVGs
-
-For this [Barebones](https://github.com/paulrobertlloyd/barebones)-esque project I’m hoping to stick away from Compass or Bourbon as ideally this project should give the developer the autonomy to pick which Sass/JS framework or CMS/templating system they’ll need for a particular project.
-
 
 ## Workflow
 
