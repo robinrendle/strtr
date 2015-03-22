@@ -2,12 +2,12 @@
 
 ### A simple, no frills front-end boilerplate.
 
-This repo contains the following: 
+This repo contains the following:
 
 - An `index.html` file with best practices for writing clean, semantic markup.
 - A plain Sass starting point, a simple `_reset.scss` file is imported into `project.scss` for maximum flexibility.
 - A series of helpful Gulp tasks are included to:
-    - compile Sass 
+    - compile Sass
     - minimise CSS
     - optimise images + SVGs
 
@@ -32,7 +32,7 @@ Here’s how to get this thing up and running:
 - Like all boilerplates, this project needs to be simple so I can easily throw things on top of it.
 - Particular styles for writing CSS change a lot over time (SMACSS, BEM, SUIT, etc.) hence this boilerplate is agnostic in that regard, letting the individual project dictate which method is best.
 - At the moment I’m keeping jspm config files out of this repo since some projects don’t really need fancy pants ES6, Tracuer and JS modules.
-- CSS is pretty cool I guess.
+- CSS is pretty cool I guess because.
 
 ## Contributions
 
