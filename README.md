@@ -24,16 +24,6 @@ Here’s how to get this thing up and running:
 5. `npm run-script build` will run a series of Gulp tasks to minify the CSS and to optimize images.
 
 
-## General thoughts
-
-- Starting a new project should be fun and lightning fast. I want to start building as soon as I get a neat idea but I don’t want a lot of useless files bundled with something like a framework.
-- I shouldn’t have to copy + paste code from previous projects because it’s remarkably inefficient.
-- The initial codebase ought to be very malleable and flexible.
-- Like all boilerplates, this project needs to be simple so I can easily throw things on top of it.
-- Particular styles for writing CSS change a lot over time (SMACSS, BEM, SUIT, etc.) hence this boilerplate is agnostic in that regard, letting the individual project dictate which method is best.
-- At the moment I’m keeping jspm config files out of this repo since some projects don’t really need fancy pants ES6, Tracuer and JS modules.
-
-
 ## Contributions
 
 If you have any ideas to make strtr better, then just send me a pull request or open an issue.
