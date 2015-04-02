@@ -1,25 +1,5 @@
 # strtr
 
-### A simple, no frills front-end boilerplate.
-
-At the beginning of each project I often return to the project I just finished, copying and pasting bits of code as I go. This feels haphazard and unorganised to say the least, so the aim of this project is to optimize, optimize, optimize! I want to spend more of my time building a website rather than dealing with the tedious interlinking of dependencies that I commonly have to work with. So please note that this boilerplate is not designed to be used in production, it’s merely a collection of methods for getting into a coding environment as quickly as possible.
-
-This repo contains the following: 
-
-- An `index.html` file with best practices for writing clean, semantic markup.
-- A plain Sass starting point, a simple `_reset.scss` file is imported into `project.scss` for maximum flexibility.
-- A series of helpful Gulp tasks are included to:
-    - compile Sass 
-    - minimise CSS
-    - optimise images + SVGs
-
-For this [Barebones](https://github.com/paulrobertlloyd/barebones)-esque project I’m hoping to stick away from Compass or Bourbon as ideally this project should give the developer the autonomy to pick which Sass/JS framework or CMS/templating system they’ll need for a particular project.
-
-
-## Workflow
-
-Throughout the last dozen or so projects I’ve worked on, the underlying front-end has been relatively simple. The `./src` directory contains all of the images, Sass and JavaScript files whilst a suite of Gulp tasks are set to minimize, concatenate and move these files into `./build`.
-
 Here’s how to get this thing up and running:
 
 1. Clone the repo.
@@ -31,13 +11,15 @@ Here’s how to get this thing up and running:
 
 ## General thoughts
 
+Throughout the last dozen or so projects I’ve worked on, the underlying front-end has been relatively simple. The `./src` directory contains all of the images, Sass and JavaScript files whilst a suite of Gulp tasks are set to minimize, concatenate and move these files into `./build`.
+
 - Starting a new project should be fun and lightning fast. I want to start building as soon as I get a neat idea but I don’t want a lot of useless files bundled with something like a framework.
 - I shouldn’t have to copy + paste code from previous projects because it’s remarkably inefficient.
 - The initial codebase ought to be very malleable and flexible.
 - Like all boilerplates, this project needs to be simple so I can easily throw things on top of it.
 - Particular styles for writing CSS change a lot over time (SMACSS, BEM, SUIT, etc.) hence this boilerplate is agnostic in that regard, letting the individual project dictate which method is best.
 - At the moment I’m keeping jspm config files out of this repo since some projects don’t really need fancy pants ES6, Tracuer and JS modules.
-
+- CSS architecture should be decided on a project by project basis.
 
 ## Contributions
 
