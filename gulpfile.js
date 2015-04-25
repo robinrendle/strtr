@@ -8,7 +8,31 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     size = require('gulp-size'),
     imageop = require('gulp-image-optimization'),
-    svgo = require('gulp-svgo');
+    svgo = require('gulp-svgo'),
+    browserSync = require('browser-sync').create(),
+    reload = browserSync.reload;
+
+
+
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch(['src/sass/*.scss', 'src/sass/**/*.scss' ], ['sass']);
+    gulp.watch("index.html").on('change', reload);
+});
+
+// Compiles scss into the build/css dir
+gulp.task('sass', function(){
+    return gulp.src('./src/sass/*.scss')
+        .pipe(sass())
+        .pipe(prefix())
+        .pipe(gulp.dest('./build/css'))
+        .pipe(reload({stream: true}));
+});
 
 // SVG optimisation
 gulp.task('svg', function(){
@@ -31,19 +55,6 @@ gulp.task('images', function(cb){
 });
 
 
-// Compiles scss into the build/css dir
-gulp.task('sass', function(){
-    gulp.src('./src/sass/project.scss')
-        .pipe(watch(function(files){
-            return files.pipe(sass({
-                errLogToConsole: true
-            }))
-                .pipe(prefix())
-                .pipe(size({gzip: true, showFiles: true, title:'unminified project.css'}))
-                .pipe(gulp.dest('./build/css'))
-        }));
-});
-
 // Minifies CSS
 gulp.task('minify', function(){
     gulp.src('./build/css/project.css')
@@ -61,15 +72,8 @@ gulp.task('prefix', function(){
         .pipe(gulp.dest('./build/css'));
 });
 
-// Watch tasks
-gulp.task('start', function(){
-    gulp.watch('./src/sass/project.scss', ['sass']);
-    gulp.watch('./src/sass/*.scss', ['sass']);
-    gulp.watch('./src/sass/**/*.scss', ['sass']);
-})
-
 // Tasks for production
 gulp.task('build', ['images', 'minify', 'svg']);
 
 // Default tasks
-gulp.task('default', ['build', 'start']);
+gulp.task('default', ['build', 'serve']);
