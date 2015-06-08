@@ -73,7 +73,7 @@ gulp.task('prefix', function(){
 });
 
 // Tasks for production
-gulp.task('build', ['images', 'minify', 'svg']);
+gulp.task('build', ['images', 'sass', 'svg', 'minify']);
 
 // Default tasks
 gulp.task('default', ['build', 'serve']);
