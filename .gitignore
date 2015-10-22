@@ -3,3 +3,4 @@ design
 node_modules
 .npm-debug*
 .DS_Store
+npm-debug.log
