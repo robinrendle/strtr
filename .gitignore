@@ -1,4 +1,5 @@
 build
+design
 node_modules
 .npm-debug*
 .DS_Store

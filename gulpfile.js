@@ -1,5 +1,3 @@
-// Default gulpfile tasks for strtr
-
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'),
@@ -8,7 +6,6 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     size = require('gulp-size'),
     imageop = require('gulp-image-optimization'),
-    svgo = require('gulp-svgo'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
 
@@ -16,11 +13,9 @@ var gulp = require('gulp'),
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
-
     browserSync.init({
         server: "./"
     });
-
     gulp.watch(['src/sass/*.scss', 'src/sass/**/*.scss' ], ['sass']);
     gulp.watch("index.html").on('change', reload);
 });
@@ -32,15 +27,6 @@ gulp.task('sass', function(){
         .pipe(prefix())
         .pipe(gulp.dest('./build/css'))
         .pipe(reload({stream: true}));
-});
-
-// SVG optimisation
-gulp.task('svg', function(){
-    gulp.src('./src/img/*.svg')
-        .pipe(size({gzip: true, showFiles: true}))
-        .pipe(svgo())
-        .pipe(size({gzip: true, showFiles: true}))
-        .pipe(gulp.dest('./build/img'));
 });
 
 // Image optimization from /img to /build/img
@@ -73,7 +59,7 @@ gulp.task('prefix', function(){
 });
 
 // Tasks for production
-gulp.task('build', ['images', 'sass', 'svg', 'minify']);
+gulp.task('build', ['images', 'sass', 'minify']);
 
 // Default tasks
 gulp.task('default', ['build', 'serve']);
