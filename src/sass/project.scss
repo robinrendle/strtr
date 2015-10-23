@@ -1,12 +1,179 @@
 // =====================================================================
-// PROJECT NAME
+// ERDOS
 // =====================================================================
 
-// Include Sass partials 
-
+// Include Sass partials
 @import 'reset';
+@import 'mixins/clearfix';
+
+$font-src: '/fonts/';
+
+@font-face {
+    font-family: "Webfont Italic";
+    src: url('#{$font-src}italic.eot'); // IE9
+    src: url('#{$font-src}italic.woff2') format('woff2'),
+         url('#{$font-src}italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Webfont Regular";
+    src: url('#{$font-src}regular.eot'); // IE9
+    src: url('#{$font-src}regular.woff2') format('woff2'),
+         url('#{$font-src}regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Webfont Bold Italic";
+    src: url('#{$font-src}bold.eot'); // IE9
+    src: url('#{$font-src}bold.woff2') format('woff2'),
+         url('#{$font-src}bold.woff') format('woff');
+}
 
 body {
     font-size: 100%;
-    font-family: Helvetica, sans-serif;
+    font-family: "Webfont Regular", Helvetica, sans-serif;
+    text-align: center;
+    padding: 0;
+    color: #404040;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+
+    &:before,
+    &:after {
+        content: "";
+        background-image: url('/build/img/pattern.png');
+        background-size: contain;
+        background-color: #ccc;
+        height: 50px;
+        display: block;
+        width: 100%;
+        position: absolute;
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &:after {
+        bottom: 0;
+
+        @media screen and (min-width: 700px){
+            content: none;
+        }
+    }
+}
+
+p {
+    margin-bottom: 15px;
+    color: #909196;
+    font-size: 18px;
+}
+
+
+// FORM STYLES
+// ==========================================================================
+
+form {
+    @include clearfix();
+    display: block;
+    font-style: italic;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+legend {
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    float: left;
+    margin-right: 5px;
+    line-height: 1.4;
+    color: #888;
+    font-family: "Webfont Italic";
+}
+
+input {
+    font-family: "Webfont Italic";
+    line-height: 1.4;
+    display: inline-block;
+    float: left;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    -webkit-appearance: none;
+    padding-left: 10px;
+    padding-bottom: 0;
+    box-shadow: none;
+    outline: none;
+    color: #888;
+    margin-top: 0;
+
+    &:focus {
+        color: #444;
+        border-bottom: 1px solid #444;
+    }
+}
+
+.js & {
+    input[type="submit"] {
+        display: none;
+    }
+
+    .visible input[type="submit"] {
+        display: block;
+    }
+}
+
+input[type="submit"] {
+    background-color: transparent;
+    padding: 10px 40px;
+    float: right;
+    clear: both;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Webfont Bold Italic";
+    cursor: pointer;
+
+    @media screen and (min-width: 700px){
+        clear: none;
+        padding: 5px 5px;
+    }
+}
+
+
+.content {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.u-uppercase {
+    text-transform: uppercase;
+}
+
+.u-block {
+    display: block;
+}
+
+.u-weight--bold {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 60px;
+    letter-spacing: .3em;
+
+    @media screen and (min-width: 700px){
+        font-size: 80px;
+    }
+}
+
+.subtitle {
+    font-size: 20px;
+    letter-spacing: .3em;
+    margin-bottom: 100px;
 }
